@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 50" role="img" aria-label="Ego-only input; WiLoR hand pose; pressure and contact; two-clip memory">
+<rect width="930" height="50" fill="#fff" rx="12"/>
+<g font-family="Arial" font-size="14" font-weight="600">
+<rect x="5" y="6" width="207" height="36" rx="18" fill="#EFF6FF"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" x="43" y="29" fill="#1D4ED8">EGO-ONLY INPUT</text>
+<rect x="224" y="6" width="207" height="36" rx="18" fill="#EFF6FF"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" x="260" y="29" fill="#1D4ED8">WILOR HAND POSE</text>
+<rect x="443" y="6" width="245" height="36" rx="18" fill="#FFF4E8"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" x="481" y="29" fill="#AF541A">PRESSURE + CONTACT</text>
+<rect x="700" y="6" width="225" height="36" rx="18" fill="#F2F0FF"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" x="741" y="29" fill="#6441AA">PAST-CLIP MEMORY</text>
+</g></svg>

@@ -1,0 +1,149 @@
+model:
+  name: TouchAnything
+  task: tactile_prediction
+  vision_encoder:
+    type: qwen3_5
+    model_name: qwen3.5_4b
+    pretrained_path: checkpoints/Qwen3.5-4B
+    freeze: false
+    patch_size: 16
+    embed_dim: 768
+    local_files_only: true
+    load_dtype: bfloat16
+    attn_implementation: sdpa
+    use_pooler_output: false
+  temporal_transformer:
+    num_layers: 3
+    num_heads: 8
+    hidden_dim: 768
+    mlp_ratio: 4.0
+    dropout: 0.1
+    window_size: 8
+  pose_decoder:
+    type: joint_query
+    hidden_dims:
+    - 512
+    - 256
+    - 128
+    output_dim: 144
+    dropout: 0.1
+    num_query_layers: 2
+    num_query_heads: 8
+  num_input_joints: 42
+  multi_view:
+    enabled: true
+    num_cross_layers: 2
+    num_heads: 8
+    mlp_ratio: 4.0
+    dropout: 0.1
+    view_dropout_prob: 0.0
+    summary_fusion: false
+  pose_encoder:
+    type: transformer
+    num_joints: 42
+    num_layers: 2
+    num_heads: 8
+    mlp_ratio: 4.0
+    dropout: 0.1
+    output_mode: per_joint
+    normalization: wrist_relative_m
+    wrist_relative_scale_m: 0.2
+    inter_wrist_relation:
+      enabled: true
+      scale_m: 0.5
+      max_distance_m: 1.0
+  fusion:
+    type: cross_attention
+    num_heads: 8
+    num_layers: 2
+    mlp_ratio: 4.0
+    dropout: 0.1
+  tactile_decoder:
+    type: joint_level
+    num_joints: 42
+    conv_channels: 128
+    tactile_size: 21
+    dropout: 0.1
+  tactile_queries:
+    enabled: true
+    num_queries_per_hand: 64
+    num_layers: 2
+    num_heads: 8
+    mlp_ratio: 4.0
+    dropout: 0.1
+    roi_floor: 0.05
+    alignment:
+      enabled: true
+      dim: 256
+      contact_threshold: 0.1
+      visual_touch_weight: 0.25
+      pose_touch_weight: 0.25
+      visual_pose_weight: 0.1
+      reconstruction_weight: 0.25
+  qwen_full_reasoner:
+    enabled: true
+    pretrained_path: checkpoints/Qwen3.5-4B
+    local_files_only: true
+    load_dtype: bfloat16
+    attn_implementation: sdpa
+    direction_mode: bidirectional_shared
+    gradient_checkpointing: false
+    freeze_language_model: false
+    freeze_token_embeddings: true
+    use_prompt: true
+    prompt: Predict bimanual tactile pressure from multi-view video and hand pose.
+    residual_scale: 0.1
+    dropout: 0.1
+  clip_memory:
+    enabled: true
+    history_clips: 2
+    memory_tokens_per_clip: 16
+    num_layers: 2
+    num_heads: 8
+    mlp_ratio: 4.0
+    dropout: 0.1
+    residual_scale: 0.1
+  privileged_multiview_teacher:
+    enabled: true
+    teacher_momentum: 0.996
+    predictor_hidden_dim: 1536
+    ego_only_probability: 1.0
+    wrist_drop_probability: 1.0
+    distill_clean_ego: false
+    student_augmentation_probability: 0.8
+    student_downscale_min: 0.72
+    student_downscale_max: 0.9
+    student_noise_probability: 0.5
+    student_noise_std_min: 0.02
+    student_noise_std_max: 0.06
+    student_input_clip_min: -2.2
+    student_input_clip_max: 2.7
+    gap_gate_enabled: true
+    query_gap_min: 0.002
+    query_gap_max: 0.5
+    contact_gap_min: 1.0e-05
+    contact_gap_max: 0.1
+    contact_teacher_confidence: 0.6
+    query_weight: 1.0
+    pressure_weight: 0.5
+    contact_weight: 0.5
+    contact_temperature: 1.0
+data:
+  image_size:
+  - 224
+  - 224
+  normalize_mean:
+  - 0.5
+  - 0.5
+  - 0.5
+  normalize_std:
+  - 0.5
+  - 0.5
+  - 0.5
+  clip_length: 8
+  frame_interval: 2
+  pose_source: wilor
+  fallback_pose_source: null
+  pose_coordinate_mode: wrist_relative
+  target_fps: 15.0
+  tactile_size: 21

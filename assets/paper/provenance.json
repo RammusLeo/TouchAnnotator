@@ -1,0 +1,60 @@
+{
+  "source": "Author-provided TouchAnnotator manuscript (3879.pdf)",
+  "figures": {
+    "overview": {
+      "page": 2,
+      "crop_pdf_points": [
+        105,
+        80,
+        508,
+        203
+      ]
+    },
+    "method": {
+      "page": 4,
+      "crop_pdf_points": [
+        108,
+        83,
+        505,
+        176
+      ]
+    },
+    "egotouch-results": {
+      "page": 7,
+      "crop_pdf_points": [
+        102,
+        355,
+        506,
+        502
+      ]
+    },
+    "fpha-results": {
+      "page": 7,
+      "crop_pdf_points": [
+        108,
+        503,
+        508,
+        606
+      ]
+    },
+    "measured-recordings": {
+      "page": 8,
+      "crop_pdf_points": [
+        105,
+        80,
+        505,
+        233
+      ]
+    },
+    "cross-embodiment": {
+      "page": 9,
+      "crop_pdf_points": [
+        108,
+        82,
+        505,
+        153
+      ]
+    }
+  },
+  "logo": "Hand icon extracted from Figure 1, original image dimensions 322x314"
+}

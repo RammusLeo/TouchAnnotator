@@ -1,0 +1,71 @@
+[
+  {
+    "source_frames": 50,
+    "sampled_frames": 25,
+    "source_fps": 30.0,
+    "frame_interval": 2,
+    "left_detected": 2,
+    "right_detected": 0,
+    "pressure_units": "sensor-relative, normalized [0,1]",
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "torch": "2.7.1+cu126",
+    "peak_gpu_memory_bytes": 10258576896,
+    "case": "smoke_raw",
+    "pressure_range": [
+      1.8533319234848022e-07,
+      0.734375
+    ],
+    "contact_probability_range": [
+      1.3445969671010971e-08,
+      0.99609375
+    ],
+    "rendered_frames": 50
+  },
+  {
+    "source_frames": 50,
+    "sampled_frames": 25,
+    "source_fps": 30.0,
+    "frame_interval": 2,
+    "left_detected": 0,
+    "right_detected": 6,
+    "pressure_units": "sensor-relative, normalized [0,1]",
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "torch": "2.7.1+cu126",
+    "peak_gpu_memory_bytes": 10258576896,
+    "case": "smoke_bimanual",
+    "pressure_range": [
+      6.891787052154541e-07,
+      0.61328125
+    ],
+    "contact_probability_range": [
+      5.0961971282958984e-06,
+      0.9921875
+    ],
+    "rendered_frames": 50
+  },
+  {
+    "source_frames": 50,
+    "sampled_frames": 25,
+    "source_fps": 30.0,
+    "frame_interval": 2,
+    "left_detected": 21,
+    "right_detected": 20,
+    "pressure_units": "sensor-relative, normalized [0,1]",
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "torch": "2.7.1+cu126",
+    "peak_gpu_memory_bytes": 10258576896,
+    "case": "smoke_visible",
+    "pressure_range": [
+      1.3597309589385986e-07,
+      0.52734375
+    ],
+    "contact_probability_range": [
+      1.0477378964424133e-08,
+      0.9921875
+    ],
+    "rendered_frames": 50
+  }
+]

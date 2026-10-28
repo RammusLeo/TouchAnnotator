@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 240" role="img" aria-labelledby="title desc">
+<title id="title">TouchAnnotator</title><desc id="desc">A touch gesture above a warm contact field, with the TouchAnnotator wordmark.</desc>
+<defs><linearGradient id="blue" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#2474F4"/><stop offset="1" stop-color="#103A59"/></linearGradient><linearGradient id="orange"><stop stop-color="#FF9D42"/><stop offset="1" stop-color="#F97332"/></linearGradient></defs>
+<rect width="1120" height="240" rx="24" fill="#fff"/>
+<g transform="translate(38 21)">
+<ellipse cx="95" cy="159" rx="46" ry="18" fill="#FF9235"/>
+<ellipse cx="95" cy="159" rx="64" ry="28" fill="none" stroke="#FFBF87" stroke-width="2"/>
+<path d="M143 26 L70 112 C58 127 58 145 72 150 C83 154 96 148 104 137 L127 106 L169 85" fill="none" stroke="#103A59" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M79 119 C87 121 99 113 106 102" fill="none" stroke="#103A59" stroke-width="8" stroke-linecap="round"/>
+<path d="M17 115 V86 H44 M150 150 V178 H125" fill="none" stroke="#2474F4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 146 Q21 158 30 172 M167 140 Q181 156 169 175" fill="none" stroke="#B5C9DA" stroke-width="3.5" stroke-linecap="round"/>
+</g>
+<text x="257" y="126" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="88" letter-spacing="-4"><tspan fill="#103A59">Touch</tspan><tspan fill="#2474F4">Annotator</tspan></text>
+<text x="261" y="168" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" letter-spacing="5" fill="#64748B">FROM EGOCENTRIC VIDEO TO TOUCH</text>
+</svg>

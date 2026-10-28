@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+outputs/
+third_party/
+*.pth
+*.ckpt
+*.pt
+*.safetensors
+checkpoints/Qwen3.5-4B/
+*.partial
+fetch_state.json
+
+.DS_Store
+.cache/
+.venv/
+.env
+.env.*

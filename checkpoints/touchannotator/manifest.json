@@ -1,0 +1,9 @@
+{
+  "file": "model.pth",
+  "sha256": "16ee5a3779e1e21e6b1102375dad2e8455c28cfbb90c12c7f2d310e91bee8170",
+  "bytes": 9401275903,
+  "tensors": 1218,
+  "source_run": "20260824_003600_qwen3.5_4b_tactile_prediction_qwen35_full_causal_memory_opd_full_qwen",
+  "epoch": 2,
+  "contents": "student model_state_dict; original dtype; no optimizer or teacher"
+}
